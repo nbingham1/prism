@@ -13,10 +13,10 @@ Prism.languages.chp = {
 			{ pattern: /\+(\s*[;,\|\]\[])/g, replace: '\u21BE$1'}, // ↾
 			{ pattern: /-(\s*[;,\|\]\[])/g,  replace: '\u21C2$1'}, // ⇂
 			{ pattern: /\[\]/g, replace: '\u25AF'}, // ▯
-			{ pattern: /:/g,    replace: '|'} // |
+			{ pattern: /:([^=])/g,    replace: '|$1'} // |
 	],
 	'node': { 
-		pattern: /_([a-zA-Z_][a-zA-Z0-9_]*)/g,
+		pattern: /\.([a-zA-Z_][a-zA-Z0-9_]*)/g,
 		replace_after: '$1'
 	},  // subscript
 	'probe': {
