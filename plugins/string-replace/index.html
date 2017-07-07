@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<title>String Replace ▲ Prism plugins</title>
+	<base href="../.." />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="themes/prism.css" data-noprefix />
+	<style>
+	.node {
+		vertical-align: sub;
+		font-size: 0.75em;
+	}
+	.probe {
+		text-decoration: overline;
+	}
+	</style>
+	<script src="prefixfree.min.js"></script>
+
+	<script>var _gaq = [['_setAccount', 'UA-33746269-1'], ['_trackPageview']];</script>
+	<script src="http://www.google-analytics.com/ga.js" async></script>
+</head>
+<body>
+
+<header>
+	<div class="intro" data-src="templates/header-plugins.html" data-type="text/html"></div>
+
+	<h2>String Replace</h2>
+	<p>A method for string replacement in language definitions.</p>
+</header>
+
+<section>
+	<h1>Examples</h1>
+
+	<h2>HSE</h2>
+	<pre class="language-chp"><code>
+*[[ L_f -> R_f+
+  [] L_t -> R_t+
+  ]; L_e-;
+  [~L_f&~L_t]; R_f-,R_t-;
+  L_e+
+ ]
+</code></pre>
+
+	<h2>CHP</h2>
+	<pre class="language-chp"><code>
+*[ A?a, B?b, C?c, D?d; S!(a+b*c/d) ]
+</code></pre>
+
+<h2>Probes</h2>
+	<pre class="language-chp"><code>
+*[[ #A -> S!(A?)
+  [] #B -> S!(B?)
+  ]
+ ]
+</code></pre>
+
+
+
+
+</section>
+
+<footer data-src="templates/footer.html" data-type="text/html"></footer>
+
+<script src="prism.js"></script>
+<script src="plugins/string-replace/prism-string-replace.js"></script>
+<script src="components/prism-chp.js"></script>
+<script src="utopia.js"></script>
+<script src="components.js"></script>
+<script src="code.js"></script>
+
+</body>
+</html>

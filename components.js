@@ -142,6 +142,10 @@ var components = {
 			"require": "c",
 			"owner": "zeitgeist87"
 		},
+		"chp": {
+			"title": "CSP",
+			"owner": "nbingham1"
+		},
 		"coffeescript": {
 			"title": "CoffeeScript",
 			"require": "javascript",
@@ -687,6 +691,12 @@ var components = {
 			"owner": "mAAdhaTTah",
 			"require": "toolbar",
 			"noCSS": true
+		},
+		"string-replace": {
+			"title": "String Replace",
+			"owner": "nbingham1",
+			"noCSS": true
 		}
+
 	}
 };
