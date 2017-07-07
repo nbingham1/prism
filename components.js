@@ -143,7 +143,7 @@ var components = {
 			"owner": "zeitgeist87"
 		},
 		"chp": {
-			"title": "CSP",
+			"title": "CHP",
 			"owner": "nbingham1"
 		},
 		"coffeescript": {
