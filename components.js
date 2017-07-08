@@ -143,7 +143,11 @@ var components = {
 			"owner": "zeitgeist87"
 		},
 		"chp": {
-			"title": "CHP",
+			"title": "Communicating Hardware Processes",
+			"owner": "nbingham1"
+		},
+		"prs": {
+			"title": "Production Rules",
 			"owner": "nbingham1"
 		},
 		"coffeescript": {

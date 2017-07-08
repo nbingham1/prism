@@ -1,8 +1,6 @@
-Prism.languages.chp = {
+Prism.languages.prs = {
 	'replace': [
 			{ pattern: /->/g,   replace: '\u2192'}, // →
-			{ pattern: /\|\|/g, replace: '\u2225'}, // ∥
-			{ pattern: /\*\[/g, replace: '\u2217['}, //⁎[
 			{ pattern: /~/g,  replace: '\u00AC'}, // ¬
 			{ pattern: /\&/g, replace: '\u2227'}, // ∧
 			{ pattern: /\|/g, replace: '\u2228'}, // ∨
@@ -10,17 +8,15 @@ Prism.languages.chp = {
 			{ pattern: />=/g, replace: '\u2265'}, // ≥
 			{ pattern: /!=/g, replace: '\u2260'}, // ≠
 			{ pattern: /==/g, replace: '='     }, // =
-			{ pattern: /\+(\s*(?:[;,\|\]\[]|$))/g, replace: '\u21BE$1'}, // ↾
-			{ pattern: /-(\s*(?:[;,\|\]\[]|$))/g,  replace: '\u21C2$1'}, // ⇂
-			{ pattern: /\[\]/g, replace: '\u25AF'}, // ▯
-			{ pattern: /:([^=])/g,    replace: '|$1'} // |
+			{ pattern: /\+(\s*(?:\n|$))/g, replace: '\u21BE$1'}, // ↾
+			{ pattern: /-(\s*(?:\n|$))/g,  replace: '\u21C2$1'}, // ⇂
 	],
 	'node': { 
 		pattern: /\.([a-zA-Z_][a-zA-Z0-9_]*)/g,
 		replace_after: '$1'
 	},  // subscript
-	'probe': {
-		pattern: /#([a-zA-Z_][a-zA-Z0-9_]*)/g,
+	'bubble': {
+		pattern: /_([a-zA-Z_][a-zA-Z0-9_]*)/g,
 		replace_after: '$1'
 	},  // overline
 	'logic': {
@@ -34,15 +30,6 @@ Prism.languages.chp = {
 	},
 	'assign': {
 		pattern: /\u21BE|\u21C2|:=/
-	},
-	'channel': {
-		pattern: /!|\?/
-	},
-	'compose': {
-		pattern: /\u2225|;|,/
-	},
-	'control': {
-		pattern: /\u2217\[|\[|\]|\||\u25AF|\u2192/
 	},
 	'comment': [
 		{
@@ -60,7 +47,6 @@ Prism.languages.chp = {
 	},
 	'keyword': /\b(skip|null)\b/,
 	'boolean': /\b(true|false)\b/,
-	'function': /[a-z0-9_]+(?=\()/i,
 	'number': /\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,
 };
 
